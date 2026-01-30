@@ -1,1 +1,2 @@
 ive learnt how to make a token and how to connect r to git hub.
+push moved files to git and you can see them in the repositry.
