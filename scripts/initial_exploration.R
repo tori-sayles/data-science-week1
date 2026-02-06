@@ -59,4 +59,9 @@ mosquito_egg_raw |>
     n_distinct(female_id)
   )
 
-
+# Inspect duplicated rows
+mosquito_egg_raw |> 
+  filter(duplicated(mosquito_egg_raw))
+# Keep only unduplicated data
+mosquito_egg_raw |> 
+  filter(!duplicated(mosquito_egg_raw))
