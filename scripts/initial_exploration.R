@@ -40,3 +40,23 @@ mosquito_egg_raw |>
 #   
 # - Any obvious problems?a few NA values is various columns there are 13 missing values in the collector column 
 #
+
+
+mosquito_egg_raw |> mutate(collection_date = as_date (collection_date))
+
+# checking for duplicates using two methods 
+mosquito_egg_raw |> 
+  get_dupes()
+# check for whole duplicate 
+# rows in the data
+mosquito_egg_raw |> 
+  filter(duplicated(across(everything())))
+sum() 
+
+mosquito_egg_raw |> 
+  summarise(
+    n = n(),
+    n_distinct(female_id)
+  )
+
+
